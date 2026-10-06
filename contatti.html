@@ -40,7 +40,7 @@
       risponderò al più presto.
     </p>
 
-    <form class="form-contatti">
+    <form class="form-contatti" id="form-contatti">
       <div class="campo">
         <label for="nome">Nome</label>
         <input type="text" id="nome" name="nome" required>
@@ -68,6 +68,32 @@
     <p class="footer-copy">© 2026 Francesco Ingallati</p>
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>
+  // 1. Inizializza EmailJS con la tua Public Key
+  emailjs.init("gsMJXYAQmPN2FD7py");
+
+  // 2. Trova il form tramite il suo id
+  const form = document.getElementById("form-contatti");
+
+  // 3. Quando il form viene inviato...
+  form.addEventListener("submit", function (event) {
+    event.preventDefault(); // blocca l'invio classico del browser (che ricaricherebbe la pagina)
+
+    // 4. Invia i dati del form a EmailJS (Service ID, Template ID, il form stesso)
+    emailjs.sendForm("service_nshqcss", "template_137ix4a", form)
+      .then(function () {
+        // 5a. Se l'invio riesce:
+        alert("Messaggio inviato! Ti risponderò al più presto.");
+        form.reset(); // svuota il form
+      })
+      .catch(function (error) {
+        // 5b. Se qualcosa va storto:
+        alert("Si è verificato un errore. Riprova o scrivimi direttamente via email.");
+        console.error(error);
+      });
+  });
+</script>
 </body>
 
 </html>

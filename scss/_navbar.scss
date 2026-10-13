@@ -1,0 +1,23 @@
+.navbar {
+    background-color: $colore-testo;
+    padding: 1rem 0;
+
+    .navbar-brand {
+        color: $colore-accento;
+        font-weight: bold;
+        font-size: 1.4rem;
+    }
+
+    .nav-link {
+        color: $colore-sfondo;
+
+        &:hover {
+            color: $colore-accento;
+        }
+    }
+
+
+    .nav-link.active {
+        color: $colore-accento;
+    }
+}

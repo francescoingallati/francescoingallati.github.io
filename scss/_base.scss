@@ -1,0 +1,18 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $colore-sfondo;
+    color: $colore-testo;
+    font-family: $font-testo;
+}
+
+h1,
+h2,
+h3 {
+    font-family: $font-titoli;
+}
+

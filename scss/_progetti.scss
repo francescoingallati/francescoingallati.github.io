@@ -1,0 +1,68 @@
+.progetti {
+    @extend %sezione;
+
+    h2 {
+        font-size: 2.5rem;
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+}
+
+.griglia-progetti {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+
+    @media (min-width: 768px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+.card-progetto {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+
+    h3 {
+        color: $colore-testo;
+        font-size: 1.3rem;
+        margin-bottom: 0.75rem;
+    }
+
+    p {
+        color: $colore-tenue;
+        margin-bottom: 1rem;
+    }
+
+    .tecnologie {
+        color: $colore-accento-testo;
+        font-weight: 600;
+        font-size: 0.9rem;
+    }
+
+    .link-progetto {
+        @extend %link-stile;
+        margin-top: auto;
+
+    }
+}
+
+.card-coming-soon {
+    opacity: 0.85;
+    border: 2px dashed $colore-tenue;
+
+    .badge-soon {
+        margin-top: auto;
+        display: inline-block;
+        background-color: $colore-accento;
+        color: $colore-testo;
+        padding: 0.4rem 0.9rem;
+        border-radius: 20px;
+        font-weight: 600;
+        font-size: 0.85rem;
+        align-self: flex-start;
+    }
+}

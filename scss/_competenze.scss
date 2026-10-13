@@ -1,0 +1,35 @@
+.competenze {
+    @extend %sezione;
+
+    h2 {
+        font-size: 2.5rem;
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+}
+
+.griglia-competenze {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+
+    @media (min-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.card-competenza {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    border-top: 4px solid $colore-accento;
+
+    h3 {
+        color: $colore-testo;
+        margin-bottom: 0.75rem;
+    }
+
+    p {
+        color: $colore-tenue;
+    }
+}

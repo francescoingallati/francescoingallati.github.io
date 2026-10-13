@@ -1,0 +1,29 @@
+footer {
+    background-color: $colore-testo;
+    color: $colore-sfondo;
+    text-align: center;
+    padding: 3rem 2rem;
+    margin-top: 4rem;
+
+    .footer-social {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        margin: 1.5rem 0;
+
+        a {
+            color: $colore-sfondo;
+            text-decoration: none;
+            font-weight: 600;
+
+            &:hover {
+                color: $colore-accento;
+            }
+        }
+    }
+
+    .footer-copy {
+        color: $colore-tenue-chiaro;
+        font-size: 0.9rem;
+    }
+}

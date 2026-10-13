@@ -1,0 +1,15 @@
+%link-stile {
+  color: $colore-testo;
+  font-weight: 600;
+  text-decoration: none;
+
+  &:hover {
+    color: $colore-accento-testo;
+  }
+}
+
+%sezione {
+    padding: 5rem 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}

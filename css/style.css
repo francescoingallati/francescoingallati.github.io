@@ -10,8 +10,25 @@ body {
   font-family: "Inter", sans-serif;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: "Poppins", sans-serif;
+}
+
+.cv-progetto .cv-progetto-link, .cv-contatti a, .card-progetto .link-progetto {
+  color: #1e2a3a;
+  font-weight: 600;
+  text-decoration: none;
+}
+.cv-progetto .cv-progetto-link:hover, .cv-contatti a:hover, .card-progetto .link-progetto:hover {
+  color: #8a5a12;
+}
+
+.progetti, .competenze {
+  padding: 5rem 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 .navbar {
@@ -29,8 +46,11 @@ h1, h2, h3 {
 .navbar .nav-link:hover {
   color: #e8a33d;
 }
+.navbar .nav-link.active {
+  color: #e8a33d;
+}
 
-header {
+.hero {
   min-height: 85vh;
   display: flex;
   flex-direction: column;
@@ -39,11 +59,11 @@ header {
   text-align: center;
   padding: 2rem;
 }
-header h1 {
-  font-size: 3.5rem;
+.hero h1 {
+  font-size: clamp(2rem, 7vw, 3.5rem);
   margin-bottom: 1rem;
 }
-header p {
+.hero p {
   font-size: 1.25rem;
   color: #6b7688;
   max-width: 700px;
@@ -52,6 +72,8 @@ header p {
 .hero-bottoni {
   margin-top: 2rem;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 1rem;
 }
 .hero-bottoni .btn {
@@ -70,18 +92,28 @@ header p {
 }
 .hero-bottoni .btn-outline {
   border: 2px solid #e8a33d;
-  color: #e8a33d;
+  color: #8a5a12;
 }
 .hero-bottoni .btn-outline:hover {
   background-color: #e8a33d;
   color: #1e2a3a;
 }
 
-.competenze {
-  padding: 5rem 2rem;
-  max-width: 1100px;
-  margin: 0 auto;
+.foto-hero {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 2px solid #1e2a3a;
+  margin-bottom: 50px;
 }
+.foto-hero img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .competenze h2 {
   font-size: 2.5rem;
   text-align: center;
@@ -92,6 +124,11 @@ header p {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1.5rem;
+}
+@media (min-width: 768px) {
+  .griglia-competenze {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .card-competenza {
@@ -108,11 +145,6 @@ header p {
   color: #6b7688;
 }
 
-.progetti {
-  padding: 5rem 2rem;
-  max-width: 1100px;
-  margin: 0 auto;
-}
 .progetti h2 {
   font-size: 2.5rem;
   text-align: center;
@@ -123,6 +155,11 @@ header p {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1.5rem;
+}
+@media (min-width: 768px) {
+  .griglia-progetti {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .card-progetto {
@@ -142,18 +179,12 @@ header p {
   margin-bottom: 1rem;
 }
 .card-progetto .tecnologie {
-  color: #e8a33d;
+  color: #8a5a12;
   font-weight: 600;
   font-size: 0.9rem;
 }
 .card-progetto .link-progetto {
   margin-top: auto;
-  color: #1e2a3a;
-  font-weight: 600;
-  text-decoration: none;
-}
-.card-progetto .link-progetto:hover {
-  color: #e8a33d;
 }
 
 .card-coming-soon {
@@ -194,7 +225,7 @@ footer .footer-social a:hover {
   color: #e8a33d;
 }
 footer .footer-copy {
-  color: #6b7688;
+  color: #a0aab8;
   font-size: 0.9rem;
 }
 
@@ -239,6 +270,7 @@ footer .footer-copy {
 .form-contatti .campo textarea:focus {
   outline: none;
   border-color: #e8a33d;
+  box-shadow: 0 0 0 3px rgba(232, 163, 61, 0.3);
 }
 .form-contatti .btn-invia {
   background-color: #e8a33d;
@@ -252,6 +284,18 @@ footer .footer-copy {
 }
 .form-contatti .btn-invia:hover {
   background-color: #c9852a;
+}
+
+.form-esito {
+  margin-top: 1rem;
+  text-align: center;
+  font-weight: 600;
+}
+.form-esito.successo {
+  color: #2e7d32;
+}
+.form-esito.errore {
+  color: #c62828;
 }
 
 .cv {
@@ -275,10 +319,23 @@ footer .footer-copy {
 }
 .cv-intestazione .cv-etichetta {
   font-size: 1.2rem;
-  color: #e8a33d;
+  color: #8a5a12;
   font-weight: 600;
   margin-bottom: 20px;
   letter-spacing: 1px;
+}
+.cv-intestazione .btn-cv {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1.25rem;
+  border: 2px solid #e8a33d;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #8a5a12;
+}
+.cv-intestazione .btn-cv:hover {
+  background-color: #e8a33d;
+  color: #1e2a3a;
 }
 
 .cv-contatti {
@@ -290,15 +347,6 @@ footer .footer-copy {
   justify-content: center;
   gap: 0.5rem 1.5rem;
 }
-.cv-contatti a {
-  color: #1e2a3a;
-  text-decoration: none;
-  font-weight: 600;
-}
-.cv-contatti a:hover {
-  color: #e8a33d;
-}
-
 .cv-sezione {
   margin-bottom: 2.75rem;
 }
@@ -335,21 +383,6 @@ footer .footer-copy {
   line-height: 1.6;
 }
 
-@media (min-width: 768px) {
-  .cv-voce {
-    display: grid;
-    grid-template-columns: 160px 1fr;
-    gap: 1.5rem;
-  }
-  .cv-voce .cv-periodo {
-    margin-bottom: 0;
-    padding-top: 0.15rem;
-  }
-  .cv-competenze .cv-gruppo-nome {
-    display: inline-block;
-    min-width: 170px;
-  }
-}
 .cv-competenze {
   list-style: none;
   padding: 0;
@@ -369,7 +402,7 @@ footer .footer-copy {
   color: #1e2a3a;
 }
 .cv-competenze .cv-gruppo-formazione .cv-gruppo-nome {
-  color: #e8a33d;
+  color: #8a5a12;
 }
 
 .cv-progetto {
@@ -389,20 +422,11 @@ footer .footer-copy {
   margin-bottom: 0.4rem;
 }
 .cv-progetto .cv-progetto-tech {
-  color: #e8a33d;
+  color: #8a5a12;
   font-weight: 600;
   font-size: 0.9rem;
   margin-bottom: 0.5rem;
 }
-.cv-progetto .cv-progetto-link {
-  color: #1e2a3a;
-  font-weight: 600;
-  text-decoration: none;
-}
-.cv-progetto .cv-progetto-link:hover {
-  color: #e8a33d;
-}
-
 .cv-lingue {
   list-style: none;
   padding: 0;
@@ -417,26 +441,18 @@ footer .footer-copy {
   font-weight: 600;
 }
 
-.foto-hero {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  border: 2px solid #1e2a3a;
-  margin-bottom: 50px;
-}
-.foto-hero img {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
 @media (min-width: 768px) {
-  .griglia-competenze {
-    grid-template-columns: repeat(2, 1fr);
+  .cv-voce {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 1.5rem;
   }
-  .griglia-progetti {
-    grid-template-columns: repeat(3, 1fr);
+  .cv-voce .cv-periodo {
+    margin-bottom: 0;
+    padding-top: 0.15rem;
+  }
+  .cv-competenze .cv-gruppo-nome {
+    display: inline-block;
+    min-width: 170px;
   }
 }

@@ -1,0 +1,15 @@
+@mixin griglia($col-tablet, $col-desktop: $col-tablet) {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+
+  @media (min-width: $bp-tablet) {
+    grid-template-columns: repeat($col-tablet, 1fr);
+  }
+
+  @if $col-desktop != $col-tablet {
+    @media (min-width: $bp-desktop) {
+      grid-template-columns: repeat($col-desktop, 1fr);
+    }
+  }
+}

@@ -1,23 +1,17 @@
 .navbar {
-    background-color: $colore-testo;
-    padding: 1rem 0;
+  background-color: $colore-testo;
+  padding: 1rem 0;
 
-    .navbar-brand {
-        color: $colore-accento;
-        font-weight: bold;
-        font-size: 1.4rem;
-    }
+  &[data-bs-theme="dark"] {
+    --bs-navbar-color: #{$colore-sfondo};
+    --bs-navbar-hover-color: #{$colore-accento};
+    --bs-navbar-active-color: #{$colore-accento};
+    --bs-navbar-brand-color: #{$colore-accento};
+    --bs-navbar-brand-hover-color: #{$colore-accento};
+  }
 
-    .nav-link {
-        color: $colore-sfondo;
-
-        &:hover {
-            color: $colore-accento;
-        }
-    }
-
-
-    .nav-link.active {
-        color: $colore-accento;
-    }
+  .navbar-brand {
+    font-weight: bold;
+    font-size: 1.4rem;
+  }
 }

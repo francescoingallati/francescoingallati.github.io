@@ -39,25 +39,10 @@
             font-size: 1rem;
 
             &:focus {
-                outline: none;
-                border-color: $colore-accento;
-                box-shadow: 0 0 0 3px rgba($colore-accento, 0.3);
+                outline: 2px solid $colore-accento-testo;
+                border-color: $colore-accento-testo;
+                outline-offset: 2px;
             }
-        }
-    }
-
-    .btn-invia {
-        background-color: $colore-accento;
-        color: $colore-testo;
-        border: none;
-        padding: 0.9rem;
-        border-radius: 8px;
-        font-weight: 600;
-        font-size: 1rem;
-        cursor: pointer;
-
-        &:hover {
-            background-color: $colore-accento-scuro;
         }
     }
 }

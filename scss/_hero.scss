@@ -25,33 +25,6 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 1rem;
-
-    .btn {
-        padding: 0.75rem 1.75rem;
-        font-weight: 600;
-        border-radius: 8px;
-    }
-
-    .btn-primary {
-        background-color: $colore-accento;
-        border-color: $colore-accento;
-        color: $colore-testo;
-
-        &:hover {
-            background-color: $colore-accento-scuro;
-            border-color: $colore-accento-scuro;
-        }
-    }
-
-    .btn-outline {
-        border: 2px solid $colore-accento;
-        color: $colore-accento-testo;
-
-        &:hover {
-            background-color: $colore-accento;
-            color: $colore-testo;
-        }
-    }
 }
 
 .foto-hero {
@@ -59,7 +32,7 @@
     height: 200px;
     border-radius: 50%;
     border: 2px solid $colore-testo;
-    margin-bottom: 50px;
+    margin-bottom: 3rem;
 
     img {
         width: 100%;

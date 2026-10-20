@@ -1,0 +1,37 @@
+%btn-base {
+  --bs-btn-padding-x: 1.75rem;
+  --bs-btn-padding-y: 0.75rem;
+  --bs-btn-font-weight: 600;
+  --bs-btn-border-radius: 8px;
+  --bs-btn-border-width: 2px;
+  --bs-btn-focus-shadow-rgb: #{red($colore-accento-testo)}, #{green($colore-accento-testo)}, #{blue($colore-accento-testo)};
+}
+
+.btn-ambra {
+  @extend %btn-base;
+  --bs-btn-color: #{$colore-testo};
+  --bs-btn-bg: #{$colore-accento};
+  --bs-btn-border-color: #{$colore-accento};
+  --bs-btn-hover-color: #{$colore-testo};
+  --bs-btn-hover-bg: #{$colore-accento-scuro};
+  --bs-btn-hover-border-color: #{$colore-accento-scuro};
+  --bs-btn-active-color: #{$colore-testo};
+  --bs-btn-active-bg: #{$colore-accento-scuro};
+  --bs-btn-active-border-color: #{$colore-accento-scuro};
+  --bs-btn-disabled-color: #{$colore-testo};
+  --bs-btn-disabled-bg: #{$colore-accento};
+  --bs-btn-disabled-border-color: #{$colore-accento};
+}
+
+.btn-ambra-contorno {
+  @extend %btn-base;
+  --bs-btn-color: #{$colore-accento-testo};
+  --bs-btn-bg: transparent;
+  --bs-btn-border-color: #{$colore-accento};
+  --bs-btn-hover-color: #{$colore-testo};
+  --bs-btn-hover-bg: #{$colore-accento};
+  --bs-btn-hover-border-color: #{$colore-accento};
+  --bs-btn-active-color: #{$colore-testo};
+  --bs-btn-active-bg: #{$colore-accento-scuro};
+  --bs-btn-active-border-color: #{$colore-accento-scuro};
+}

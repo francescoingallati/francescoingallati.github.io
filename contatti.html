@@ -24,7 +24,7 @@
 
 <body>
 
-  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+  <nav class="navbar navbar-expand-lg sticky-top" data-bs-theme="dark">
     <div class="container">
       <a class="navbar-brand" href="index.html">Francesco Ingallati</a>
 
@@ -67,9 +67,9 @@
           <textarea id="messaggio" name="messaggio" rows="6" required></textarea>
         </div>
 
-        <button type="submit" class="btn-invia">Invia messaggio</button>
+        <button type="submit" class="btn btn-ambra btn-invia">Invia messaggio</button>
       </form>
-      <p class="form-esito" id="form-esito"></p>
+      <p class="form-esito" id="form-esito" role="status" aria-live="polite"></p>
     </section>
 
   </main>

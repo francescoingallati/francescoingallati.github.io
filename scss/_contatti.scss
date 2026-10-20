@@ -17,32 +17,21 @@
 }
 
 .form-contatti {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+    --bs-border-color: #{$colore-tenue};
+    --bs-border-radius: 8px;
 
-    .campo {
-        display: flex;
-        flex-direction: column;
+    .form-label {
+        font-weight: 600;
+    }
 
-        label {
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
+    .form-control {
+        padding: 0.75rem;
 
-        input,
-        textarea {
-            padding: 0.75rem;
-            border: 1px solid $colore-tenue;
-            border-radius: 8px;
-            font-family: $font-testo;
-            font-size: 1rem;
-
-            &:focus {
-                outline: 2px solid $colore-accento-testo;
-                border-color: $colore-accento-testo;
-                outline-offset: 2px;
-            }
+        &:focus {
+            border-color: $colore-accento-testo;
+            outline: 2px solid $colore-accento-testo;
+            outline-offset: 2px;
+            box-shadow: none;
         }
     }
 }

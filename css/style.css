@@ -248,31 +248,20 @@ footer .footer-copy {
 }
 
 .form-contatti {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
+  --bs-border-color: #5f6a7c;
+  --bs-border-radius: 8px;
 }
-.form-contatti .campo {
-  display: flex;
-  flex-direction: column;
-}
-.form-contatti .campo label {
+.form-contatti .form-label {
   font-weight: 600;
-  margin-bottom: 0.5rem;
 }
-.form-contatti .campo input,
-.form-contatti .campo textarea {
+.form-contatti .form-control {
   padding: 0.75rem;
-  border: 1px solid #5f6a7c;
-  border-radius: 8px;
-  font-family: "Inter", sans-serif;
-  font-size: 1rem;
 }
-.form-contatti .campo input:focus,
-.form-contatti .campo textarea:focus {
-  outline: 2px solid #8a5a12;
+.form-contatti .form-control:focus {
   border-color: #8a5a12;
+  outline: 2px solid #8a5a12;
   outline-offset: 2px;
+  box-shadow: none;
 }
 
 .form-esito {
